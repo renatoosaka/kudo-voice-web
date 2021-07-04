@@ -1,0 +1,134 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 100vh;
+}
+
+.card {
+  position: absolute;
+
+  .body {
+    padding: 0.5rem;
+
+    background-color: #e2e2e2;
+    box-shadow: 0 2rem 0 -1rem #eae9e9,
+                0 4rem 0 -2rem #f1f1f1,
+                0 6rem 0 -3rem #fafafa;    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.counter {
+  position: absolute;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3e7bf0;  
+  border-radius: 0 0 0.5rem 0 ;
+  width: 3rem;
+  height: 3rem;
+  color: #fff;
+
+  z-index: 10;
+  box-shadow: 0.25rem 0.25rem .25rem rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  button {
+    margin: 1rem 0;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 6rem;
+    height: 4rem;
+  
+    transition: all 0.2s ease-in-out;
+    background-color: transparent;
+
+    &:nth-last-child(2) {
+      background-color: #3e7bf0;
+      box-shadow: 0.05rem 0.05rem 0.25rem rgba(62, 123, 240, 0.36);
+
+      svg {
+        color: #fff;
+      }
+
+      &:hover {
+        svg {
+          color: #fff;
+        }
+      }      
+    }
+    
+    svg {
+      color: #838383;
+    }
+
+    &:disabled {
+      visibility: hidden;
+    }
+
+    &:hover {
+      svg {
+        color: #3e7bf0;
+      }
+    }
+
+    &:active {
+      transform: scale(0.8);
+    }       
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 640px;
+
+  textarea {
+    resize: vertical;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+    color: #333;
+    width: 100%;
+  
+    &:focus-within {
+      border-color: #3e7bf0;
+    }
+  }
+  
+  button {
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    color: #fff;
+    font-weight: medium;
+    background-color: #3e7bf0;
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+      background-color: #4b78ce;
+    }
+  }
+}
