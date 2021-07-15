@@ -87,12 +87,12 @@ export default function Home() {
   if (kudos.length <= 0) {
     return (
       <div className={styles.container}>
-        <small>Digite um kudo por linha. Ex: https://kudobox.co/q/qfgp9OJVgVNvCLaEuiTA_k/</small>
+        {/* <small>Digite um kudo por linha. Ex: https://kudobox.co/q/qfgp9OJVgVNvCLaEuiTA_k/</small> */}
         <form className={styles.form} onSubmit={handleFormSubmit}>
-          <textarea rows={20} autoFocus ref={textareaRef}/>
+          <input type="text" autoFocus ref={textareaRef} defaultValue='https://kudobox.co/q/uU_0sBtYaOw-KUvj08MloS/' />
 
           <button type="submit">
-            Carregar kudos
+            Carrega kudo
           </button>
         </form>
       </div>
@@ -102,9 +102,9 @@ export default function Home() {
   return (    
     <div className={styles.container}>
       <div className={styles.card}>
-        <div className={styles.counter}>
+        {/* <div className={styles.counter}>
           <span>{ kudoIndex + 1}</span>/<small>{kudos.length}</small>
-        </div>
+        </div> */}
         <div className={styles.wrapper}>
           <div className={styles.body}>
             <Image src={`${process.env.NEXT_PUBLIC_API_URL}/image/${kudos[kudoIndex]}`} width={669} height={477} alt="Kudo" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNU2HelFAAE4QIpvhr6VwAAAABJRU5ErkJggg==" />
